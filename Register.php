@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
+	<title>Registrar</title>
 	<link rel="stylesheet" href="">
 </head>
 <body>
@@ -11,7 +11,7 @@
 
 	<div class="title">Register</div>
 
-	<form action="" method="POST" enctype="multipart/form-data">
+	<form action="view/exitoRegistro.php" method="POST" enctype="multipart/form-data">
 		<label for="user">User Name</label>
 		<input type="text" name="usuario" id="user" placeholder="Dada">
 		<br>
@@ -34,9 +34,9 @@
 		<br>
 		<input type="file" name="image" id="imge">
 		<br>
-		<input type="hidden" name="rol" value="2">
+		<input type="hidden" name="rol" value="3">
 		<br>
-		<input type="submit" value="Login">
+		<input type="submit" value="Registrar">
 	</form>
 </body>
 </html>

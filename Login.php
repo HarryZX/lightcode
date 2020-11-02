@@ -1,23 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="">
-</head>
-<body>
-	<div class="logo">LightCode</div>
-	<div class="title">Login</div>
-	<form action="" method="POST">
-		<label for="user">User</label>
-		<input type="text" name="usuario" id="user" placeholder="Dada">
-		<br>
-		<label for="pass">Password</label>
-		<input type="password" name="passwd" id="pass">
-		<br>
-		<br>
-		<input type="submit" value="Login">
-	</form>
-</body>
-</html>
+<?php
+include 'view/loginView.php';
+include_once 'model/UserModel.php';
+include_once 'controller/UserSessions.php';
+
+if (isset($_POST['usuario']) && isset($_POST['passwd'])){
+
+	// SI NO HAY SESIÓN INICIADA SE ENVIARÁN LAS CREDENCIALES
+	$userForm = $_POST['usuario'];
+	$passForm = $_POST['passwd'];
+
+	// COMPROBAMOS QUE EXISTE EL USUARIO Y ACCEDEMOS A LA SESIÓN DEL USUARIO
+	if($userInst->userExists($userForm, $passForm)){
+		$sessionInst->setCurrentUser($userForm);
+		$userInst->setUser($userForm);
+		
+		header('location: view/myroom.php');
+		
+	}else{
+
+		// SI LAS CREDENCIALES SON INCORRECTAS
+		$errorLogin = "Nombre de usuario y/o password es incorrecto";
+	}
+
+}
+?>
