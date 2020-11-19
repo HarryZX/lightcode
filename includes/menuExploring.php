@@ -1,3 +1,4 @@
+<?php require("configs/config.php");?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
 			</ul>
 		</div>
 		<div class="login">
-			<a href="Register.php">Register</a>
-			<a href="Login.php">Login</a>
+			<a href="<?php echo SERVERURL; ?>Registro/">Register</a>
+			<a href="<?php echo SERVERURL; ?>Login/">Login</a>
 		</div>
 	</div>

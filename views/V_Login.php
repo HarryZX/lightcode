@@ -1,3 +1,4 @@
+<?php require("configs/config.php");?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +20,6 @@
 		<br>
 		<input type="submit" value="Login">
 	</form>
-	<a href="index.php">Volver</a>
+	<a href="<?php echo SERVERURL; ?>">Volver</a>
 </body>
 </html>

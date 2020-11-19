@@ -11,7 +11,7 @@
 
 	<div class="title">Register</div>
 
-	<form action="view/exitoRegistro.php" method="POST" enctype="multipart/form-data">
+	<form action="" method="POST" enctype="multipart/form-data">
 		<label for="user">User Name</label>
 		<input type="text" name="usuario" id="user" placeholder="Dada">
 		<br>
